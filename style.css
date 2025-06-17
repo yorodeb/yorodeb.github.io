@@ -49,3 +49,23 @@ li{
 	color: var(--secondary-text);
 }
 
+.container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+	max-width: 1200px;
+	margin: 40px auto;
+	padding: 0 20px;
+}
+
+.entry{
+	background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: left;
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
