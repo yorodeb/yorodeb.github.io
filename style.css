@@ -17,21 +17,21 @@ body{
 	max-width: 60em;
 }
 
-a{
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-a:hover{
-  text-decoration: underline;
-}
-
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Lora', serif;
 	font-weight: 600;
 	font-style: italic;
 	font-size: 2em;
-  color: var(--text-color);
+	color: var(--text-color);
+}
+
+a{
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
 }
 
 p{
@@ -39,7 +39,6 @@ p{
 	font-weight: 400;
 	font-style: normal;
 	font-size: 20px;
-  color: var(--secondary-text);
 }
 
 li{
@@ -47,6 +46,6 @@ li{
 	font-weight: 400;
 	font-style: normal;
 	font-size: 20px;
-  color: var(--secondary-text);
+	color: var(--secondary-text);
 }
 
