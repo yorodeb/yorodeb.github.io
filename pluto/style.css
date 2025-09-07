@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --primary-color: #1e1e1e;
+    --accent-color: #bb86fc;
+    --text-color: #e0e0e0;
+    --secondary-text: #a0a0a0;
+    --border-color: #2c2c2c;
+    --hover-color: #333;
+}
+
+* {
+    margin: 0; 
+    padding: 0
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+        font-family: 'Lora', serif;
+        font-weight: 600;
+        color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+header h2 {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navigation a {
+		font-family: 'Ubuntu Mono', monospace;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: var(--hover-color);
+    color: var(--accent-color);
+}
+
+main {
+    margin-bottom: 40px;
+}
+
+section {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+time {
+    color: var(--secondary-text);
+    font-size: 1.25rem;
+		font-family: 'Ubuntu Mono';
+		font-style: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin: 25px 0 15px;
+    color: var(--text-color);
+}
+
+pre {
+    background-color: #282c34;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 15px 0;
+    border: 1px solid var(--border-color);
+}
+
+code {
+    font-family: 'Ubuntu Mono' monospace;
+		font-weight: 400;
+		font-style: normal;
+    font-size: 0.95rem;
+    color: #abb2bf;
+}
+
+footer {
+		font-family: 'Ubuntu Mono';
+		font-style: bold;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-text);
+    font-size: 20px;
+}
+

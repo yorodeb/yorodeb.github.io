@@ -1,0 +1,62 @@
+<!DOCTYPE-HTML>
+
+<html>
+
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		<link rel = "icon" href = "../visuals/favicon.png" type = "image/x-icon">
+		<link rel = "stylesheet" href = "../style.css">
+		<title>╰༼ ⋋ ‸ ⋌ ༽╯</title>
+	</head>
+
+	<header>
+		<h1>Pluto.</h1>
+		<nav class = "navigation"
+			<ul>
+				<li><a href = "../index.html">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h2>What is Pluto?</h2>
+		<p>
+		Pluto is a metasyntactic variable, a placeholder name used in programming and technical documentation. It's often used alongside other placeholder names like foo and bar to represent a value or entity without giving it a specific, meaningful name. This helps in providing generic examples and avoiding confusion with real data or variables.
+		</p>
+
+		<div id = "lyric-display"></div>
+	 <script>
+					const lyrics = [
+							"I got my mind on my money and my money on my mind.",
+							"You only get one shot, do not miss your chance to blow.",
+							"Changes come with changes, that's what a good one does.",
+							"It was all a dream, I used to read Word Up! magazine.",
+							"If you're not in the mood for the whole thing, just grab a piece.",
+							"Survival of the fittest, only the strong will thrive.",
+							"I say the loudest in the room is probably the loneliest one in the room.",
+							"I might be a mistake, but I'm an honest one.",
+							"Please don't leave me now. Don't leave.",
+							"Brace yourself, I'll take you on a trip down memory lane.",
+							"My left stroke just went viral.",
+							"Burn this shit down, turn this shit up",
+							"Psst, I see dead people",
+							"Ayy, Mustard on the beat, ho"
+					];
+					const randomIndex = Math.floor(Math.random() * lyrics.length);
+					const randomLyric = "▶ " + lyrics[randomIndex] + "◀";
+					document.getElementById('lyric-display').textContent = randomLyric;
+			</script>
+
+		<ul>
+
+			<li><a href = "commotion.html">Data Structures & Algorithms*</a></li>
+		</ul>
+
+	</main>
+
+	<footer>
+		<p><b>&copy; 2025 Yorokobi-San. All Rights Reserved.</b></p>
+	</footer>
+
+</html>

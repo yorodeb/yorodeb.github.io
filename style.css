@@ -95,3 +95,12 @@ li{
 	font-style: bold;
 	color: var(--text-color);
 }
+
+#lyric-display{
+	font-family: 'Lora', serif;
+	font-weight: 600;
+	font-size: 2em;
+	font-style: bold;
+	color: var(--text-color)
+	padding: 20px;
+}

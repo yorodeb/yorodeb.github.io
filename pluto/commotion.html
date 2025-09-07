@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../visuals/favicon.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>📖 Algorithms</title>
+</head>
+
+<body>
+    <header>
+        <h1>Data Structures & Algorithms.</h1>
+        <h2>By Dr. Aman Gupta</h2>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#week-1">Week: 0x1</a></li>
+                <li><a href="#week-2">Week: 0x2</a></li>
+                <li><a href="#week-3">Week: 0x3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<section id="week-1">
+<h2>Week &#8544</h2>
+<time datetime="2025-08-28">August 28th, 2025</time>
+
+<h3>Q: You are given a 3-digit number n, Find whether it is an Armstrong number or not.</h3>
+<pre><code class="language-c">
+int isArmstrong(int prgin) {
+		int prg_state = prgin;
+		int summition = 0; // Initialize summition
+		while (prgin > 0) {
+				int diff = prgin % 10;
+				summition += diff * diff * diff;
+				prgin /= 10; // Use /= for division assignment
+		}
+		if (summition == prg_state) {
+				return 1;
+		} else {
+				return 0;
+		}
+}
+</code></pre>
+
+<h3>Q: Given a natural number n. You have to find the number of digits in it and return it.</h3>
+<pre><code class="language-c">
+int numberOfDigit(int prgin) {
+		if (prgin == 0) return 1; // Handle the case of zero
+		int counter = 0; // Initialize counter
+		while (prgin > 0) {
+				counter++;
+				prgin /= 10;
+		}
+		return counter;
+}
+</code></pre>
+
+<h3>Q: You are given an integer n. Your task is to reverse the digits, ensuring that the reversed number has no leading zeroes.</h3>
+<pre><code class="language-c">
+int reverseDigit(int prgin) {
+		int reversed_int = 0; // Initialize reversed_int
+		while (prgin > 0) {
+				int diff = prgin % 10;
+				reversed_int = reversed_int * 10 + diff;
+				prgin /= 10;
+		}
+		return reversed_int;
+}
+</code></pre>
+
+<h3>Q: Given a positive number n. Find the sum of all the digits of n.</h3>
+<pre><code class="language-c">
+int sumOfDigits(int prgin) {
+		int summition = 0; // Initialize summition
+		while (prgin > 0) {
+				int diff = prgin % 10;
+				summition += diff;
+				prgin /= 10;
+		}
+		return summition;
+}
+</code></pre>
+
+<h3>Q: Given a number n, determine whether it is a prime number or not.<br>Note: A prime number is a number greater than 1 that has no positive divisors other than 1 and itself.</h3>
+<pre><code class="language-c">
+int primeChecker(int prgin) {
+		if (prgin <= 1) return 0; 
+		for (int foo = 2; foo * foo <= prgin; foo++) { 
+				if (prgin % foo == 0) {
+						return 0;
+				}
+		}
+		return 1;
+}
+</code></pre>
+
+<h3>Q: Given a positive integer, n. Find the factorial of n.</h3>
+<pre><code class="language-c">
+int factorial(int prgin) {
+		if (prgin < 0) return -1; // Handle negative numbers
+		int result = 1; // Initialize result
+		for (int foo = 2; foo <= prgin; foo++) { // Start loop from 2
+				result *= foo;
+		}
+		return result;
+}
+</code></pre>
+</section>
+
+<section id="week-2">
+<h2>Week &#8545</h2>
+<time datetime="2025-09-01">September 1st, 2025</time>
+
+<h3>Q: A series with same common difference is known as arithmetic series.<br>The first term of series is 'a' and common difference is d. The series looks like a, a + d, a + 2d, a + 3d, . . . Find the sum of series upto nth term.</h3>
+<pre><code class="language-c">
+int sumOfAP(int prg_n, int prg_first, int prg_d) {
+		int summition = 0; // Initialize summition
+		for (int foo = 0; foo < prg_n; foo++) {
+				int term = prg_first + (foo * prg_d);
+				summition += term;
+		}
+		return summition;
+}
+</code></pre>
+
+<h3>Q: Given a number n, find the nth term in the series 1, 3, 6, 10, 15, 21…</h3>
+<pre><code class="language-c">
+int nthTerm(int prgin) {
+		int term = 0;
+		for (int foo = 1; foo <= prgin; foo++) {
+				term += foo;
+		}
+		return term;
+}
+</code></pre>
+
+<h3>Q: Given two integer values n and r, the task is to find the value of Binomial Coefficient nCr.</h3>
+<pre><code class="language-c">
+int nCr(int prg_n, int prg_r) {
+		// Check for invalid input
+		if (prg_r < 0 || prg_r > prg_n) return 0;
+		
+		long long n_factorial = factorial(prg_n);
+		long long r_factorial = factorial(prg_r);
+		long long n_minus_r_factorial = factorial(prg_n - prg_r);
+		
+		return (int)(n_factorial / (r_factorial * n_minus_r_factorial));
+}
+</code></pre>
+
+<h3>Q: Given two integers a and b, You have to compute their LCM.</h3>
+<pre><code class="language-c">
+int findLCM(int foo, int bar) {
+		int max_val = (foo > bar) ? foo : bar;
+		int limit = foo * bar;
+
+		for (int i = max_val; i <= limit; i++) {
+				if (i % foo == 0 && i % bar == 0) {
+						return i;
+				}
+		}
+		return limit;
+}
+</code></pre>
+
+<h3>Q: Given two positive integers a and b, find GCD of a and b.</h3>
+<pre><code class="language-c">
+int findHCF(int foo, int bar) {
+		while (bar != 0) {
+				int temp = bar;
+				bar = foo % bar;
+				foo = temp;
+		}
+		return foo;
+}
+</code></pre>
+
+<h3>Q: Count Divisors that are divisible by 3.</h3>
+<pre><code class="language-c">
+int countDivisors(int prgin) {
+int counter = 0;
+for(int foo = 1; foo < prgin; foo++) {
+		if(prgin%foo == 0 && prgin%3 == 0) {
+			counter++;
+		}
+	}
+	return counter;
+}
+</code></pre>
+</section>
+
+<section id="week-3">
+<h2>Week &#8546</h2>
+<time datetime="2025-09-08">September 08, 2025</time>
+</section>
+    </main>
+
+    <footer>
+        <p><b>&copy; 2025 Yorokobi-San. All Rights Reserved.</b></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script>Prism.highlightAll();</script>
+</body>
+</html>
