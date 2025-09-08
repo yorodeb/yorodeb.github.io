@@ -192,6 +192,27 @@ for(int foo = 1; foo < prgin; foo++) {
 	return counter;
 }
 </code></pre>
+
+<h3>Q: Given an integer n, for every positive integer i <= n, the task is to print.</h3>
+<pre><code class="language-c">
+void fizzBuzz(int prgin){
+	for(int foo = 1; foo <= prgin; foo++){
+		if(foo%5 == 0 && foo%3 == 0){
+			printf("FizzBuzz!\n");
+			continue;
+		} else if(foo%3 == 0){
+			printf("Fizz!\n");
+			continue;
+		} else if(foo%5 == 0){
+			printf("Buzz!\n");
+			continue;
+		}	else{
+			printf("%d\n", foo);
+		}
+	}
+}
+</code></pre>
+
 </section>
 
 <section id="week-3">
