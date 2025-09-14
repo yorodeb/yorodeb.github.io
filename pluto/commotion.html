@@ -229,6 +229,37 @@ int sumOfNumbers(int prgin){
 <section id="week-3">
 <h2>Week &#8546</h2>
 <time datetime="2025-09-08">September 08, 2025</time>
+
+<h3>Q: Largest Element in Array, Given an array arr[]. The task is to find the largest element and return it.</h3>
+<pre><code class="language-c">
+int largest(int arr[], int n) {
+    int maximum = arr[0]; //asumming a pseudo maximum!
+    for(int foo = 0; foo < n; foo++){
+        if(arr[foo] > maximum){
+            maximum = arr[foo]; //checking for greater values..
+        }
+    }
+    
+    return (maximum);
+}
+</code></pre>
+
+
+<h3>Q: Array Search. Given an array, arr[] of n integers, and an integer
+	element x, find whether element x is present in the array. Return the index
+	of the first occurrence of x in the array, or -1 if it doesn't exist.</h3>
+<pre><code class="language-c">
+int search(int arr[], int n, int x) {
+    for(int foo = 0; foo < n; foo++){
+        if(x == arr[foo]){
+            return (foo);
+        }
+    }
+    
+    return (-1);
+}
+</code></pre>
+
 </section>
     </main>
 
