@@ -244,7 +244,6 @@ int largest(int arr[], int n) {
 }
 </code></pre>
 
-
 <h3>Q: Array Search. Given an array, arr[] of n integers, and an integer
 	element x, find whether element x is present in the array. Return the index
 	of the first occurrence of x in the array, or -1 if it doesn't exist.</h3>
@@ -258,6 +257,23 @@ int search(int arr[], int n, int x) {
     
     return (-1);
 }
+</code></pre>
+
+<h3>Q: Sum of Array. You are given an integer array arr[]. The task is to find the sum of it.</h3>
+<pre><code class="language-cpp">
+class Solution {
+  public:
+    int arraySum(vector<int>& arr) {
+        int size = arr.size();
+        int summition = 0;
+        
+        for(int foo = 0; foo < size; foo++){
+            summition += arr[foo];
+        }
+        
+        return (summition);
+    }
+};
 </code></pre>
 
 </section>
