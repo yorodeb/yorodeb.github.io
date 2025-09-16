@@ -323,6 +323,38 @@ class Solution {
 };
 </code></pre>
 
+<h3>Q: Palindromic Array. Given an array arr[] of positive integers. Return
+	true if all the array elements are palindrome otherwise, return false.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    bool isPalinArray(vector<int> &arr) {
+        for(int foo = 0; foo < arr.size(); foo++){
+            if(isPalin(arr[foo]) != true){
+                return (false);
+            }
+        }
+        return true;
+    }
+    
+    bool isPalin(int prgin){
+        int prg_state = prgin;
+        int reversed = 0;
+        while(prgin > 0){
+            int diff = prgin % 10;
+            reversed = (reversed * 10) + diff;
+            prgin /= 10;
+        }
+        
+        if(reversed == prg_state){
+            return (true);
+        } else {
+            return (false);
+        }
+    }
+};
+</code></pre>
+
 <h3>Q: Reverse an Array. You are given an array of integers arr[]. You have to reverse the given array.</h3>
 <pre><code class="language-c">
 class Solution {
