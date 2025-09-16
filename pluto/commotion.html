@@ -301,6 +301,47 @@ int isPrime(int prgin){
 }
 </code></pre>
 
+
+<h3>Q: Palindrome Array. Given an array arr, the task is to find whether the
+	arr is palindrome or not. If the arr is palindrome then return true else
+	return false.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    bool isPerfect(vector<int> &arr) {
+        int left_bit = 0;
+        int right_bit = arr.size() - 1;
+        while(left_bit <= right_bit){
+            if(arr[left_bit] != arr[right_bit]){
+                return (false);
+            }
+            left_bit++;
+            right_bit--;
+        }
+        return (true);
+    }
+};
+</code></pre>
+
+<h3>Q: Reverse an Array. You are given an array of integers arr[]. You have to reverse the given array.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    void reverseArray(vector<int> &arr) {
+        int left_bit = 0;
+        int right_bit = arr.size() - 1;
+        while(left_bit < right_bit){
+            arr[left_bit] = arr[left_bit] ^ arr[right_bit];
+            arr[right_bit] = arr[left_bit] ^ arr[right_bit];
+            arr[left_bit] = arr[left_bit] ^ arr[right_bit];
+            
+            left_bit++;
+            right_bit--;
+        }
+    }
+};
+</code></pre>
+
 </section>
     </main>
 
