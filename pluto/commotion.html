@@ -417,6 +417,26 @@ class Solution {
 };
 </code></pre>
 
+
+<h3>Q: Check if array is sorted. Given an array arr[], check whether it is
+	sorted in non-decreasing order. Return true if it is sorted otherwise
+	false.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    bool isSorted(vector<int>& arr) {
+        for(int foo = 0; foo < arr.size() - 1; foo++){
+            if(arr[foo] <= arr[foo+1]){
+                continue;
+            } else{
+                return (false);
+            }
+        }
+        return (true);
+    }
+};
+</code></pre>
+
 </section>
     </main>
 
