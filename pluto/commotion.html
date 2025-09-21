@@ -441,7 +441,105 @@ class Solution {
 
 <section id="week-4">
 <h2>Week &#8547</h2>
-<time datetime="2025-09-14">September 14, 2025</time>
+<time datetime="2025-09-21">September 21, 2025</time>
+
+
+<h3>Q: Sum of elements in a matrix. Given a non null integer matrix Grid of
+	dimensions NxM.Calculate the sum of its elements.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    int sumOfMatrix(int N, int M, vector<vector<int>> Grid) {
+        int summition = 0;
+        for(int foo = 0; foo < N; foo++){
+            for(int bar = 0; bar < M; bar++){
+                summition += Grid[foo][bar];
+            }
+        }
+        
+        return (summition);
+    }
+};
+</code></pre>
+
+
+<h3>Q: Sums of i-th row and i-th column. Given a matrix A of dimensions NxM.
+	Check whether the sum of the ith row is equal to the sum of the ith column.
+	Note: Check only up to valid row and column numbers i.e if the dimensions are
+3x5, check only for the first 3 rows and columns, i.e. min(N, M).</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    int sumOfRowCol(int N, int M, vector<vector<int>> A) {
+        for(int k = 0; k < std::min(N,M); k++){
+        int sumOfRow = 0;
+        int sumOfCol = 0;
+            for(int i = 0; i < M; i++){
+                sumOfRow += A[k][i];
+            }
+            
+            for(int j = 0; j < N; j++){
+                sumOfCol += A[j][k];
+            }
+            
+            if(sumOfRow != sumOfCol){
+                return (0);
+            }
+        }
+        
+        return (1);
+    }
+};
+</code></pre>
+
+
+<h3>Q: Transpose of Matrix.You are given a square matrix of size n x n. Your
+	task is to find the transpose of the given matrix. The transpose of a matrix
+	is obtained by converting all the rows to columns and all the columns to
+rows.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    vector<vector<int>> transpose(vector<vector<int>>& mat) {
+        for(int i = 0; i < mat.size(); i++){
+            for(int j = 0; j < mat.size(); j++){
+                if(i < j){
+                    swap(mat[i][j],mat[j][i]);
+                }
+            }
+        }
+        
+        return (mat);
+    }
+};
+</code></pre>
+
+
+<h3>Q: Diagonal sum. Given a square matrix of size n×n. Your task is to calculate the sum of its diagonals.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    int DiagonalSum(vector<vector<int> >& matrix) {
+        int summition = 0;
+        for(int i = 0; i < matrix.size(); i++){
+            for(int j = 0; j < matrix.size(); j++){
+                if(i == j){
+                    summition += matrix[i][j];
+                }
+            }
+        }
+        
+        for(int i = 0; i < matrix.size(); i++){
+            for(int j = 0; j < matrix.size(); j++){
+                if((i + j) == matrix.size() - 1){
+                    summition += matrix[i][j];
+                }
+            }
+        }
+        return (summition);
+    }
+};
+</code></pre>
 
 </section>
     </main>
