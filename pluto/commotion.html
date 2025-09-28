@@ -541,6 +541,100 @@ class Solution {
 };
 </code></pre>
 
+<h3>Q: Count zeros in a sorted matrix. Given a N X N binary Square Matrix where
+	each row and column of the matrix is sorted in ascending order. Find the
+	total number of zeros present in the matrix.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    int countZeros(vector<vector<int>> A) {
+        int size = A.size();
+        int counter = 0;
+        for(int i = 0; i < size; i++){
+            for(int j = 0; j < size; j++){
+                if(A[i][j] == 0){
+                    counter++;
+                }
+            }
+        }
+        return (counter);
+    }
+};
+</code></pre>
+
+<h3>Q: Sum of upper and lower triangles. Given a square matrix of size n*n,
+	print the sum of upper and lower triangular elements. Upper Triangle consists
+	of elements on the diagonal and above it. The lower triangle consists of
+elements on the diagonal and below it.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    vector<int> sumTriangles(vector<vector<int>>& mat) {
+        int sumOfUpper = 0; int sumOfLower = 0;
+        int size = mat.size();
+        
+        for(int i = 0; i < size; i++){
+            for(int j = i; j < size; j++){
+                sumOfUpper += mat[i][j];
+            }
+        }
+        
+        for(int i = 0; i < size; i++){
+            for(int j = 0; j <= i; j++){
+                sumOfLower += mat[i][j];
+            }
+        }
+        
+        return {sumOfUpper, sumOfLower};
+    }
+};
+</code></pre>
+
+<h3>Q: Row with Minimum 1s. Given a 2D binary matrix(1-based indexed) mat of
+	dimensions nxm , determine the row that contains the minimum number of 1's.
+	Note: The matrix contains only 1's and 0's. Also, if two or more rows contain
+the minimum number of 1's, the answer is the lowest of those indices.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    int minRow(vector<vector<int>> &mat) {
+        // code here
+          int MIN_IDX = 0; int MIN = mat[0].size();
+        for(int i = 0; i < mat.size(); i++){
+            int counter = 0;
+            
+            for(int j = 0; j < mat[0].size(); j++){
+                if(mat[i][j] == 1){
+                    counter++;
+                }
+            }
+            
+            if(counter < MIN){
+                MIN = counter;
+                MIN_IDX = i;
+            }
+        }
+        return (MIN_IDX + 1);
+    }
+};
+</code></pre>
+
+<h3>Q: Multiply Matrices. Given two square Matrices A[][] and B[][]. Your task
+	is to complete the function multiply which stores the multiplied matrices in
+	a new matrix C[][].</h3>
+<pre><code class="language-c">
+void multiply(int A[][100], int B[][100], int C[][100], int N) {
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < N; j++){
+            C[i][j]=0;
+            for(int k = 0; k < N; k++){
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+}
+</code></pre>
+
 </section>
     </main>
 
