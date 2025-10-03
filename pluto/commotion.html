@@ -493,7 +493,7 @@ class Solution {
 </code></pre>
 
 
-<h3>Q: Transpose of Matrix.You are given a square matrix of size n x n. Your
+<h3>Q: Transpose of Matrix. You are given a square matrix of size n x n. Your
 	task is to find the transpose of the given matrix. The transpose of a matrix
 	is obtained by converting all the rows to columns and all the columns to
 rows.</h3>
@@ -626,7 +626,7 @@ class Solution {
 void multiply(int A[][100], int B[][100], int C[][100], int N) {
     for(int i = 0; i < N; i++){
         for(int j = 0; j < N; j++){
-            C[i][j]=0;
+            C[i][j] = 0;
             for(int k = 0; k < N; k++){
                 C[i][j] += A[i][k] * B[k][j];
             }
