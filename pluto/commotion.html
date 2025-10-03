@@ -20,6 +20,8 @@
                 <li><a href="#inception">Inception</a></li>
                 <li><a href="#arrays">Arrays</a></li>
                 <li><a href="#matrix">Matrix</a></li>
+                <li><a href="#searching">Searching</a></li>
+                <li><a href="#sorting">Sorting</a></li>
             </ul>
         </nav>
     </header>
@@ -633,6 +635,97 @@ void multiply(int A[][100], int B[][100], int C[][100], int N) {
         }
     }
 }
+</code></pre>
+</section>
+
+<section id="#searching">
+	<h2>Searching</h2>
+
+<h3>Q: Binary Search. Given an array of integers nums which is sorted in
+	ascending order, and an integer target, write a function to search target in
+	nums. If target exists, then return its index. Otherwise, return -1.</h3>
+<pre><code class="language-c">
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int left_bit = 0; int right_bit = nums.size() - 1;
+        while(left_bit <= right_bit){
+            int mid_bit = (left_bit + right_bit) / 2;
+            if(target == nums[mid_bit]){
+                return (mid_bit);
+            } else if(target < nums[mid_bit]){
+                right_bit = mid_bit - 1;
+            } else{
+                left_bit = mid_bit + 1;
+            }
+        }
+        return (-1);
+    }
+};
+</code></pre>
+</section>
+
+<section id="#sorting">
+	<h2>Sorting</h2>
+
+<h3>Q: Bubble Sort. Given an array, arr[]. Sort the array using bubble sort algorithm.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    void bubbleSort(vector<int>& arr) {
+        int size = arr.size();
+        for(int i = 0; i < size - 1; i++){
+            for(int j = 0; j < size - 1 - i; j++){
+                if(arr[j] > arr[j+1]){
+                    arr[j] = arr[j] ^ arr[j+1];
+                    arr[j+1] = arr[j] ^ arr[j+1];
+                    arr[j] = arr[j] ^ arr[j+1];
+                }
+            }
+        }
+    }
+};
+</code></pre>
+
+<h3>Q: Selection Sort. Given an array arr, use selection sort to sort arr[] in increasing order.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    void selectionSort(vector<int> &arr) {
+        int size = arr.size();
+        for(int i = 0; i < size; i++){
+            int MIN_IDX = i;
+            for(int j = i + 1; j < size; j++){
+                if(arr[j] < arr[MIN_IDX]){
+                    MIN_IDX = j;
+                }
+            }
+            swap(arr[i], arr[MIN_IDX]);
+        }
+    }
+};
+</code></pre>
+
+
+<h3>Q: Insertion Sort. Given an array arr[] of positive integers.The task is to
+	complete the insertsort() function which is used to implement Insertion
+	Sort.</h3>
+<pre><code class="language-c">
+class Solution {
+  public:
+    void insertionSort(vector<int>& arr) {
+        for(int i = 0; i < arr.size(); i++){
+            int pivot = arr[i];
+            int j = i - 1;
+            
+            while(j >= 0 && arr[j] > pivot){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = pivot;
+        }
+    }
+};
 </code></pre>
 
 </section>
