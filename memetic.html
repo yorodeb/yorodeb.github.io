@@ -1,0 +1,17 @@
+---
+layout: default
+title: Memetic Surrealism
+---
+
+<div class="feed-container">
+    {% for post in site.posts %}
+    <article class="post-bit">
+        <div class="post-meta">
+            <span class="timestamp">{{ post.date | date: "%Y-%m-%d %H:%M" }}</span>
+        </div>
+        <div class="post-content">
+            {{ post.content }}
+        </div>
+    </article>
+    {% endfor %}
+</div>

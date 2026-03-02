@@ -104,3 +104,34 @@ li{
 	color: var(--text-color)
 	padding: 20px;
 }
+
+.feed-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.post-bit {
+    border-bottom: 1px solid #333; 
+    padding: 20px 0;
+    font-family: sans-serif;
+}
+.post-header .date {
+    color: #888;
+    font-size: 0.8rem;
+}
+.post-content {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(50%); /* Optional: Adds to the 'surreal' vibe */
+    margin: 10px 0;
+    border: 1px solid #333;
+}
+
+.post-content a {
+    color: #00ff00; /* Neon green for links in the feed */
+    text-decoration: underline dotted;
+}

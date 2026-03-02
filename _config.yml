@@ -1,0 +1,3 @@
+title: Memetic Surrealism
+exclude: [".git", "visuals", "etches", "pluto"]
+markdown: kramdown
