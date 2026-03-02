@@ -4,14 +4,37 @@ title: Memetic Surrealism
 ---
 
 <div class="feed-container">
+    <div style="padding: 20px; border-bottom: 1px solid var(--border-color);">
+        <h2 style="margin: 0;">Memetic Surrealism</h2>
+        <p style="font-size: 14px; color: var(--secondary-text); margin: 5px 0 0 0;">
+            A digital stream of consciousness from the prefrontal cortex.
+        </p>
+    </div>
+
     {% for post in site.posts %}
     <article class="post-bit">
         <div class="post-meta">
-            <span class="timestamp">{{ post.date | date: "%Y-%m-%d %H:%M" }}</span>
+            <span class="user-handle" style="font-weight: bold; color: var(--text-color);">
+                @yorodeb
+            </span>
+            <span class="timestamp">
+                {{ post.date | date: "%b %d, %Y" }}
+            </span>
         </div>
+        
         <div class="post-content">
             {{ post.content }}
         </div>
+
+        <div class="post-actions" style="margin-top: 15px; font-family: 'Ubuntu Mono', monospace; font-size: 12px; color: var(--secondary-text); display: flex; gap: 20px;">
+            <span>💬 0</span>
+            <span>🔄 0</span>
+            <span>🤍 0</span>
+        </div>
     </article>
+    {% else %}
+    <div style="padding: 40px; text-align: center; font-family: 'Ubuntu Mono', monospace;">
+        <p>The void is currently silent. No shitposts found.</p>
+    </div>
     {% endfor %}
 </div>

@@ -105,33 +105,75 @@ li{
 	padding: 20px;
 }
 
+/* --- MEMETIC SURREALISM: THE FEED --- */
+
 .feed-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-.post-bit {
-    border-bottom: 1px solid #333; 
-    padding: 20px 0;
-    font-family: sans-serif;
-}
-.post-header .date {
-    color: #888;
-    font-size: 0.8rem;
-}
-.post-content {
-    margin-top: 10px;
-    line-height: 1.5;
+    max-width: 600px; /* Standard Twitter-style width */
+    margin: 40px auto;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    background-color: var(--bg-color);
 }
 
+.post-bit {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.2s ease;
+}
+
+.post-bit:hover {
+    background-color: #1a1a1a; /* Very subtle lift on hover */
+}
+
+/* Metadata / Date Area */
+.post-meta {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    color: var(--secondary-text);
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-meta .timestamp {
+    color: var(--accent-color);
+    opacity: 0.8;
+}
+
+/* Post Content Area */
+.post-content {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--text-color);
+    word-wrap: break-word;
+}
+
+/* Images in the feed - The "Twitter Card" look */
 .post-content img {
+    margin-top: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
     max-width: 100%;
     height: auto;
-    filter: grayscale(50%); /* Optional: Adds to the 'surreal' vibe */
-    margin: 10px 0;
-    border: 1px solid #333;
+    filter: grayscale(20%); /* Less intense than before */
+    display: block;
 }
 
+.post-content img:hover {
+    filter: grayscale(0%);
+}
+
+/* Links inside posts */
 .post-content a {
-    color: #00ff00; /* Neon green for links in the feed */
-    text-decoration: underline dotted;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.post-content a:hover {
+    border-bottom: 1px solid var(--accent-color);
+    text-decoration: none;
 }
