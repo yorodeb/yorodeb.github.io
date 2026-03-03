@@ -151,6 +151,35 @@ li{
     word-wrap: break-word;
 }
 
+/* Inline code */
+.post-content code {
+    background-color: #2a2a2a;   /* subtle dark background */
+    color: #ffcc66;              /* highlight color */
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.95em;
+}
+
+/* Code blocks */
+.post-content pre {
+    background-color: #1e1e1e;
+    color: #e6e6e6;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;            /* horizontal scroll if long */
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin: 12px 0;
+}
+
+.post-content pre code {
+    background: none;            /* avoid double background */
+    padding: 0;
+    color: inherit;
+}
+
 /* Images in the feed - The "Twitter Card" look */
 .post-content img {
     margin-top: 12px;
